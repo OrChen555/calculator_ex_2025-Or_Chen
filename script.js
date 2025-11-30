@@ -35,7 +35,15 @@ subtract.addEventListener('click', function () {
    addNumberToDisplay('-')
 })
 
+multiply.addEventListener('click', function () {
+    operator = '*'
+   addNumberToDisplay('*')
+})
 
+divide.addEventListener('click', function () {
+    operator = '/'
+   addNumberToDisplay('/')
+})
 
 equal.addEventListener('click', function () {
     if (operator == '+') {
@@ -44,6 +52,14 @@ equal.addEventListener('click', function () {
     }
     if(operator== '-'){
         result = x - y;
+        display.textContent = result;
+    }
+     if(operator== '*'){
+        result = x * y;
+        display.textContent = result;
+    }
+     if(operator== '/'){
+        result = x / y;
         display.textContent = result;
     }
 })
