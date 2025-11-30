@@ -30,11 +30,20 @@ plus.addEventListener('click', function () {
    addNumberToDisplay('+')
 })
 
+subtract.addEventListener('click', function () {
+    operator = '-'
+   addNumberToDisplay('-')
+})
+
+
 
 equal.addEventListener('click', function () {
     if (operator == '+') {
-        //add the numbers
         result = x + y;
+        display.textContent = result;
+    }
+    if(operator== '-'){
+        result = x - y;
         display.textContent = result;
     }
 })
