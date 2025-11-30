@@ -13,13 +13,25 @@ let equal = document.querySelector('#equal');
 
 numberButtons.forEach(btn => {
     btn.addEventListener("click", () => {
-        if (x !== undefined) {
-            y = +btn.textContent
-            addNumberToDisplay(y)
+        if (operator) {
+            if (y!==undefined){
+                y = y*10+ +btn.textContent
+                addNumberToDisplay(btn.textContent)
+            }
+            else{
+                y = +btn.textContent
+                addNumberToDisplay(btn.textContent)
+            }
         }
         else {
+            if(x!==undefined){
+                x = x*10+ +btn.textContent
+                addNumberToDisplay(btn.textContent)
+            }
+            else{
             x = +btn.textContent
-            addNumberToDisplay(x)
+            addNumberToDisplay(btn.textContent)
+            }
         }
         console.log("x: " + x + "y: " + y)
     });
